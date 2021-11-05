@@ -15,11 +15,18 @@ footer {
    padding: 20px 0;
 }
 /* Changed from 'background-color' to 'background-image'
-header.jumbotron and .jumbotron both work */
+header.jumbotron and .jumbotron both work 
+Added 0 margin to .jumbotron class to remove space between 
+the Jumbotron and the Navbar */
 .jumbotron {
+    margin: 0;
    padding: 30px;
    background-image: linear-gradient( #5637DD, #3046C5, #60106B);
    color: white;
+}
+/* Give Navbar a custom color */
+.navbar {
+   background-color: #901CAD;
 }
 .row-content {
    padding: 50px 0;
