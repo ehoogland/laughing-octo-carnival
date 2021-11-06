@@ -22,7 +22,10 @@
     <body>
         <header class="jumbotron jumbotron-fluid">
             <div class="container"> <!--container, then row, then column classes-->
-                <div class="row">
+                <div class="row"> 
+                    <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                        <img src="img/logo.png" class="img-fluid" />
+                    </div>
                     <div class="col">
                         <h1>NuCamp</h1>
                         <h2>a better way to camp</h2>
@@ -31,15 +34,17 @@
             </div>
         </header>
         <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
-            <!--Add code for a button-->
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- Enclose the ul element in the Navbar with a new div with the collapse and navbar-collapse classes, 
-                 and an id that matches the data-target used in the previously added button.
-                 Add another div with a container class around all the contents of the nav element:-->
-            <div class="collapse navbar-collapse" id="nucampNavbar"> 
-                <div class="container">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+        
+                <!--Add code for a button. Removed ml-auto from navbar-toggler when logo added -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!-- Enclose the ul element in the Navbar with a new div with the collapse and navbar-collapse classes, 
+                    and an id that matches the data-target used in the previously added button.
+                    Add another div with a container class around all the contents of the nav element:-->
+                <div class="collapse navbar-collapse" id="nucampNavbar">  
                     <ul class="navbar-nav">
                         <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>
@@ -52,21 +57,21 @@
 
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item active"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="aboutus.html">About</a></li>
-                    </ol>
                 </div>
-      <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2>Discover & Review</h2>
-                </div>
-                <div class="col">
-                    <h3>Our Campsites</h3>
-                    <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
-                </div>
-            </div>
-
+                <div class="row row-content align-items-center">
+                    <div class="col-sm-4 order-sm-last col-md-3">
+                        <h2>Discover & Review</h2>
+                    </div>   
+                    <div class="col">
+                        <div class="media">
+                            <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                            <div class="media-body align-self-center">
+                                <h3>Our Campsites</h3>
+                                <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
+                            </div>
+                        </div>
+                    </div>
+                    
             <div class="row row-content align-items-center">
                 <div class="col-sm-4 col-md-3">
                     <h2>Featured Campsites</h2>
@@ -83,16 +88,21 @@
                 </div>
             
                 <div class="col">
-                    <h3>Bootstrap Outfitters</h3>
-                    <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
-                </div>
-            </div>
+                    <div class="media">
+                        <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                        <div class="media-body align-self-center">
+                            <h3>Bootstrap Outfitters</h3>
+                            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                        </div>
+                    </div>
+                </div> 
+            </div>   
         </div><!--end container-->
 
         <footer class="site-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-4 col-sm-2 offset-xl-1">
+                    <div class="col-4 col-sm-2 offset-lg-1"><!--lg added to offset-->
                         <h5>Links</h5>
                         <ul class="list-unstyled">
                             <li><a href="#">Home</a></li>
