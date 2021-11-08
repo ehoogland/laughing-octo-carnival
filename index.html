@@ -30,6 +30,9 @@
                         <h1>NuCamp</h1>
                         <h2>a better way to camp</h2>
                     </div>
+                    <div class="col-md-4 col-xl-2 mt-4">
+                        <a href="#reserveForm" role="button" class="btn btn-secondary btn-info">Reserve Campsite</a> 
+                    </div>
                 </div>
             </div>
         </header>
@@ -102,42 +105,45 @@
                     </div>
                 </div> 
             </div>
-            <!--cards are a container with no fixed width to start, so they will fill up full
-            width of parent; customize with sizing options
-            background utilities do not set color, so a text-* utility is used -->
-            <!--add row to the container-->
-            <!--row-content detail is in stylesheet styles.css; has style and width as needed for mx-auto-->
+            <!--background utilities do not set color, so a text-* utility is used -->
+            <!--row-content detail is in stylesheet styles.css;-->
             <div class="row row-content"> 
                 <!--{property}{size} {m=margin}{x=sets both *-left and *-right}-->
-
                 <div class="col-sm-6 mx-auto">
-                    <div class="card">
+                    <div class="card"> <!--form-control-lg keeps card header text from breaking up-->
                         <h3 class="card-header bg-info text-white form-control-lg">Reserve a Campsite</h3>
                         <div class="card-body"> 
                             <!--Since Bootstrap applies display: block and width: 100% to almost all form controls, 
                                 forms will by default stack vertically.--> 
-                            <form>
-                               <div class="row form-group">
-                                        
-                                        <!--col-form-label makes labels vertically centered with their associated controls-->
-                                        <label class="col" for="numCampers">Number of Campers</label>
-                                        <div class="col-md">
-                                            <select class="col form-control" name="numCampers" id="numCampers">
-                                                <option value="">Select...</option>
-                                                <option>1</option> <!--default values-->
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                                <option>5</option>
-                                                <option>6</option>
-                                            </select>
-                                        </div>
+                            <form id="reserveForm">
+                                <div class="row form-group">         
+                                    <!--col-form-label makes labels vertically centered with their associated controls-->
+                                    <label class="col" for="numCampers">Number of Campers</label>
+                                    <div class="col-md">
+                                        <select class="col form-control" name="numCampers" id="numCampers">
+                                            <option value="">Select...</option>
+                                            <option>1</option> <!--default values-->
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                        </select>
                                     </div>
+                                </div>
                                 <div class="row">
-                                        <label class="col-sm-6 col-form-label" for="date" >Date</label>
-                                        <div class="col-md">
-                                            <input class="form-control" type="date" id="date" name="date" placeholder="date">
-                                        </div>     
+                                    <label class="col-sm-6 col-form-label" for="date" >Date</label>
+                                    <div class="col">
+                                        <input class="form-control" type="text" id="date" name="date" placeholder="mm/dd/yyyy">
+                                    </div>     
+                                </div>
+                                <div class="row">
+                                    
+                                    <div class="col">  
+                                        <input class="btn btn-primary mt-4" type="submit" value="Search">
+                                    </div>
+                                    <label class="col-form-label-lg mr-4 mt-4" for="Search" ><i class="fa fa-search"></i></label>
+                                
                                 </div>
                             </form> 
                         </div>
