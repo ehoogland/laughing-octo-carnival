@@ -56,29 +56,33 @@
         </nav>
 
         <div class="container">
-            <div class="row">
-                </div>
-                <div class="row row-content align-items-center">
-                    <div class="col-sm-4 order-sm-last col-md-3">
-                        <h2>Discover & Review</h2>
-                    </div>   
-                    <div class="col">
-                        <div class="media">
-                            <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
-                            <div class="media-body align-self-center">
-                                <h3>Our Campsites</h3>
-                                <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
-                            </div>
+            <div class="row row-content align-items-center">
+                <div class="col-sm-4 order-sm-last col-md-3">
+                    <h2>Discover & Review</h2>
+                </div>   
+                <div class="col">
+                    <div class="media">
+                        <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+                        <div class="media-body align-self-center">
+                            <h3>Our Campsites</h3>
+                            <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!</p>
                         </div>
                     </div>
-                    
+                </div>
+            </div>   
             <div class="row row-content align-items-center">
                 <div class="col-sm-4 col-md-3">
                     <h2>Featured Campsites</h2>
                 </div>
                 <div class="col">
-                    <h3>React Lake Campground</h3>
-                    <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    <div class="media">
+                        <!--align-self-* pertains to a single element-->
+                        <div class="media-body align-self-center">
+                            <h3>React Lake Campground</h3>
+                            <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                        </div><!--to create a flexbox container and transform direct children into flex items, use the d-flex class-->
+                        <img class="d-flex ml-3 img-thumbnail" src="img/react-lake-thumb.jpg" alt="React Lake Campground" />
+                    </div>
                 </div>
             </div>
             
@@ -89,14 +93,57 @@
             
                 <div class="col">
                     <div class="media">
-                        <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+                        <!--right margin 3 * 16px; 1 is 16px (default), so 3 is 48px-->
+                        <img src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" class="d-flex mr-3 img-thumbnail" />
                         <div class="media-body align-self-center">
-                            <h3>Bootstrap Outfitters</h3>
+                            <h3>Bootstrap Outfitters</h3><!--d-none to hide content-->
                             <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
                         </div>
                     </div>
                 </div> 
-            </div>   
+            </div>
+            <!--cards are a container with no fixed width to start, so they will fill up full
+            width of parent; customize with sizing options
+            background utilities do not set color, so a text-* utility is used -->
+            <!--add row to the container-->
+            <!--row-content detail is in stylesheet styles.css; has style and width as needed for mx-auto-->
+            <div class="row row-content"> 
+                <!--{property}{size} {m=margin}{x=sets both *-left and *-right}-->
+
+                <div class="col-sm-6 mx-auto">
+                    <div class="card">
+                        <h3 class="card-header bg-info text-white form-control-lg">Reserve a Campsite</h3>
+                        <div class="card-body"> 
+                            <!--Since Bootstrap applies display: block and width: 100% to almost all form controls, 
+                                forms will by default stack vertically.--> 
+                            <form>
+                               <div class="row form-group">
+                                        
+                                        <!--col-form-label makes labels vertically centered with their associated controls-->
+                                        <label class="col" for="numCampers">Number of Campers</label>
+                                        <div class="col-md">
+                                            <select class="col form-control" name="numCampers" id="numCampers">
+                                                <option value="">Select...</option>
+                                                <option>1</option> <!--default values-->
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                                <option>6</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                <div class="row">
+                                        <label class="col-sm-6 col-form-label" for="date" >Date</label>
+                                        <div class="col-md">
+                                            <input class="form-control" type="date" id="date" name="date" placeholder="date">
+                                        </div>     
+                                </div>
+                            </form> 
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div><!--end container-->
 
         <footer class="site-footer">

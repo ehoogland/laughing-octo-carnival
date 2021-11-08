@@ -28,7 +28,7 @@ the Jumbotron and the Navbar */
 .row-content {
    padding: 50px 0;
    border-bottom: 1px ridge;
-   min-height: 200px;
+   min-height: 0px;
 }
 /* Give Navbar a custom color */
 .navbar {
