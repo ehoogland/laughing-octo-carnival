@@ -30,8 +30,8 @@
                         <h1>NuCamp</h1>
                         <h2>a better way to camp</h2>
                     </div>
-                    <div class="col-md-4 col-xl-2 mt-4">
-                        <a href="#reserveForm" role="button" class="btn btn-secondary btn-info">Reserve Campsite</a> 
+                    <div class="col-md-4 col-xl-2 mt-4"> <!--text-nowrap keeps text from breaking up and keeps background from missing a corner -->
+                        <a href="#reserveForm" role="button" class="btn-lg btn-info text-nowrap">Reserve Campsite</a> 
                     </div>
                 </div>
             </div>
@@ -60,8 +60,8 @@
 
         <div class="container">
             <div class="row row-content align-items-center">
-                <div class="col-sm-4 order-sm-last col-md-3">
-                    <h2>Discover & Review</h2>
+                <div class="col-sm-4 col-md-3  order-sm-last">
+                    <h2 text-sm-right>Discover & Review</h2>
                 </div>   
                 <div class="col">
                     <div class="media">
@@ -90,7 +90,7 @@
             </div>
             
             <div class="row row-content align-items-center">
-                <div class="col-sm-4 order-sm-last col-md-3">
+                <div class="col-sm-4 col-md-3 order-sm-last ">
                     <h2>Our Community Partners</h2>
                 </div>
             
@@ -110,17 +110,17 @@
             <div class="row row-content"> 
                 <!--{property}{size} {m=margin}{x=sets both *-left and *-right}-->
                 <div class="col-sm-6 mx-auto">
-                    <div class="card"> <!--form-control-lg keeps card header text from breaking up-->
-                        <h3 class="card-header bg-info text-white form-control-lg">Reserve a Campsite</h3>
+                    <div class="card">
+                        <h3 class="card-header bg-info text-white text-nowrap">Reserve a Campsite</h3>
                         <div class="card-body"> 
                             <!--Since Bootstrap applies display: block and width: 100% to almost all form controls, 
                                 forms will by default stack vertically.--> 
                             <form id="reserveForm">
                                 <div class="row form-group">         
                                     <!--col-form-label makes labels vertically centered with their associated controls-->
-                                    <label class="col" for="numCampers">Number of Campers</label>
-                                    <div class="col-md">
-                                        <select class="col form-control" name="numCampers" id="numCampers">
+                                    <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                                    <div class="col">
+                                        <select class="form-control" name="numCampers" id="numCampers">
                                             <option value="">Select...</option>
                                             <option>1</option> <!--default values-->
                                             <option>2</option>
@@ -131,19 +131,18 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="row form-group">
                                     <label class="col-sm-6 col-form-label" for="date" >Date</label>
                                     <div class="col">
-                                        <input class="form-control-label" type="text" id="date" name="date" placeholder="mm/dd/yyyy">
+                                        <input class="form-control" type="date" id="date" name="date" placeholder="mm/dd/yyyy">
                                     </div>     
                                 </div>
-                                <div class="row">
-                                    
-                                    <div class="col">  
-                                        <input class="btn btn-primary mt-4" type="submit" value="Search">
+                                <div class="row form-group">    
+                                    <div class="col">  <!--search icon made part of button; formerly it was a label (of sorts)-->
+                                        <button type="submit" class="btn btn-primary mt-2">Search <i class="fa fa-search"></i></button>
+                                        <!--<input class="btn btn-primary mt-4" type="submit" value="Search"> -->
                                     </div>
-                                    <label class="col-form-label-lg mr-4 mt-4" for="Search" ><i class="fa fa-search"></i></label>
-                                
+                                   <!-- <label class="col-form-label-lg mr-4 mt-4" for="Search"><i class="fa fa-search"></i></label> -->
                                 </div>
                             </form> 
                         </div>
@@ -172,8 +171,8 @@
                         <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
                     </div>
                     <div class="col-sm-4 text-center">
-                        <a role="button" class="btn btn-link" href="tel:+12065551234"> <i class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234</a><br />
-                        <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"> <i class="fa fa-envelope-o fa-lg text-primary"></i> campsites@nucamp.co</a>
+                        <a role="button" class="btn btn-link" href="tel:+12065551234"> <i class="fa fa-phone fa-lg"></i> 1-206-555-1234</a><br />
+                        <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"> <i class="fa fa-envelope-o fa-lg"></i> campsites@nucamp.co</a>
                     </div>
                 </div><!--end row-->
             </div><!--end container-->
