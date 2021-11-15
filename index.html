@@ -306,7 +306,6 @@
         </footer>
 
         <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins. -->
-    
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <!--removed code that supported the tooltip on the Reserve Campsite button (tooltips must be initialized
             so this accomplished that requirement)
@@ -314,10 +313,16 @@
             $(function () {
                 $('[data-toggle="tooltip"]').tooltip()
             })
-        </script> You can't have two sets of attributes on the same button (ex: a modal and a tooltip) -->
+        </script> -->
+        <!--You can't have two sets of attributes on the same button (ex: a modal and a tooltip) -->
         <!--Author is placing this before popper and js minification scripts because instructions say to put this script 
             in the same place the tooltip code was. Previous instructions also say jquery comes first, before 
-            popper and js plugins. A potentially conflicting instruction says to place at the bottom of the file-->
+            popper and js plugins.-->
+        <!-- NOTE: This code that we are using in the beginning of the jQuery script:
+                $(function() { ... });
+        is the shorthand, recommended version for this code, called the jQuery ready method or ready function, 
+        which specifies a function to load when the webpage's DOM is ready:
+                $( document).ready(function() { ... });    -->
         <script>
             $(function() {
                 $(".carousel").carousel( { interval: 2000, pause: "false" } );
@@ -328,11 +333,9 @@
                         $(".carousel").carousel("cycle");
                 });
             });
-        </script><script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        </script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-        
-        
-
     </body>
 
 </html>
