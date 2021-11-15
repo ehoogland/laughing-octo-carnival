@@ -42,6 +42,12 @@ the Jumbotron and the Navbar */
 .carousel {
    border: solid #5637DD;
 }
+#carouselButton {
+   position: absolute;
+   right: 0;
+   bottom: 0;
+   z-index: 100; 
+}
 /* needed for tabs; removed after tabs removed and accordion added
 .tab-content {
    border: 1px solid #DDD;
