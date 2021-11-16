@@ -4,17 +4,18 @@
     <head>
         <!-- Required meta tags always come first -->
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-        <!-- Bootstrap CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+        <!-- Bootstrap CSS comes first (after required meta tags); additional CSS must be 
+             placed after Bootstrap CSS. Place bootstrap-social after font-awesome -->
+        <!-- build:css css/main.css -->
         <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-
-        <!-- Additional CSS must be placed after Bootstrap CSS -->
+    
         <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-        <!--place bootstrap-social after font-awesome-->
+        
         <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
         <link rel="stylesheet" href="css/styles.css" />
+        <!-- endbuild -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
 
         <title>NuCamp: A Better Way To Camp</title>
     </head>
@@ -295,15 +296,18 @@
                         <a role="button" class="btn btn-link" href="tel:+12065551234"><i class="fa fa-phone fa-lg"></i> 1-206-555-1234</a><br />
                         <a role="button" class="btn btn-link" href="mailto:campsites@nucamp.co"><i class="fa fa-envelope-o fa-lg"></i> campsites@nucamp.co</a>
                     </div>
-                </div><!--end row-->
-            </div><!--end container-->
+                </div><!-- end row -->
+            </div><!-- end container -->
         </footer>
-
         <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins. -->
+        <!-- The build...endbuild comment lets usemin know that these are the files to concatenate, 
+             minify and uglify and to put in this location: js/main.js -->
+        <!-- build:js js/main.js -->
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>  
-        <script src="js/scripts.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <!-- endbuild -->
     </body>
 
 </html>
